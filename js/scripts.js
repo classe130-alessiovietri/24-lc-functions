@@ -79,3 +79,25 @@ console.log('Il numero 6 è pari?', isEven(6));
 const userNumber = parseInt(prompt('Inserisci un numero:'));
 
 console.log('Il numero ' + userNumber + ' è pari?', isEven(userNumber));
+
+
+/* 
+    Generare 10 numeri random
+    (con un for o con un while)
+    attraverso una funzione
+    e stamparli a schermo
+*/
+for (let i = 0; i < 10; i++) {
+    const rndNum = generateRandomNumber();
+
+    document.writeln(rndNum + ' ');
+    
+    console.log('rndNum', rndNum, typeof rndNum);
+}
+
+function generateRandomNumber() {
+    const min = 1;
+    const max = 100;
+
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
